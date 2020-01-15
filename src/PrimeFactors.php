@@ -13,15 +13,15 @@ class PrimeFactors
         // 3. repeat
 
         $factors = [];
-        $divisor = 2;
 
-        while ($number > 1){
-            while ($number % $divisor == 0 ){
+        for ($divisor = 2; $number > 1 ; $divisor++){
+
+            for ( ; $number % $divisor == 0; $number /= $divisor ){
+
                 $factors[] = $divisor;
 
-                $number = $number / $divisor;
             }
-            $divisor++;
+
         }
 
 
