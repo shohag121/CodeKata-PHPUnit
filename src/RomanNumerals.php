@@ -31,6 +31,10 @@ class RomanNumerals
     {
         $result = "";
 
+        if ($number < 0 || $number >=4000){
+            return false;
+        }
+
         foreach (self::NUMERALS as $numeral => $roman){
 
             for (; $number >= $roman; $number -= $roman){
